@@ -16,9 +16,13 @@ body {
 }
 
 .container {
-    background-color: white;
-    width: 1000px;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 775px;
+    height: 475px;
+    border-radius: 25px;
 }
 .key {
     /* nilai var height diperoleh dari nilai var width dikali 4
@@ -31,7 +35,13 @@ body {
 .white-key {
     --width: 100px;
     background-color: white;
-    border: 1px solid #222;
+    border-top: 5px solid #222;
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+    
+}
+.white-key.active {
+    background-color: #ccc;
 }
 
 .black-key {
@@ -40,7 +50,11 @@ body {
      */
     --width: 60px;
     background-color: black;
+    border-top: 5px solid #222;
     margin-left: calc(var(--width) / -2);
     margin-right: calc(var(--width) / -2);
     z-index: 2;
+}
+.black-key.active {
+    background-color: #333;
 }
